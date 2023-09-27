@@ -17,14 +17,15 @@ const JapaneseOcr = NativeModules.JapaneseOcr
       }
     );
 
-export function ocr(path: string): Promise<any> {
-  return JapaneseOcr.ocr(path);
+export async function ocr(path: string): Promise<any> {
+  return await JapaneseOcr.ocr(path);
 }
 
-export function ocrFromURL(path: string): Promise<any> {
-  return JapaneseOcr.ocrFromURL(path);
+export async function ocrFromURL(path: string): Promise<any> {
+  return await JapaneseOcr.ocrFromURL(path);
 }
 
-export function ocrFromBase64(base64String: string): Promise<any> {
-  return JapaneseOcr.ocrFromBase64(base64String);
+
+export async function ocrFromBase64(base64String: string): Promise<any> {
+  return await JapaneseOcr.ocrFromBase64(base64String);
 }
